@@ -1,9 +1,10 @@
 import vue from '@vitejs/plugin-vue';
 import autoprefixer from 'autoprefixer';
 import laravel from 'laravel-vite-plugin';
+import i18n from 'laravel-vue-i18n/vite';
+import { resolve } from 'node:path';
 import path from 'path';
 import tailwindcss from 'tailwindcss';
-import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -21,6 +22,7 @@ export default defineConfig({
                 },
             },
         }),
+        i18n(),
     ],
     resolve: {
         alias: {
