@@ -100,7 +100,7 @@ const rightNavItems: NavItem[] = [
                                         class="flex items-center space-x-2 text-sm font-medium"
                                     >
                                         <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
-                                        <span>{{ item.title }}</span>
+                                        <span>{{ $t(item.title) }}</span>
                                     </a>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ const rightNavItems: NavItem[] = [
                                         :class="[navigationMenuTriggerStyle(), activeItemStyles(item.href), 'h-9 cursor-pointer px-3']"
                                     >
                                         <component v-if="item.icon" :is="item.icon" class="mr-2 h-4 w-4" />
-                                        {{ item.title }}
+                                        {{ $t(item.title) }}
                                     </NavigationMenuLink>
                                 </Link>
                                 <div
@@ -153,7 +153,7 @@ const rightNavItems: NavItem[] = [
                                             </Button>
                                         </TooltipTrigger>
                                         <TooltipContent>
-                                            <p>{{ item.title }}</p>
+                                            <p>{{ $t(item.title) }}</p>
                                         </TooltipContent>
                                     </Tooltip>
                                 </TooltipProvider>
